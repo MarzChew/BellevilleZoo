@@ -9,7 +9,7 @@
 			<!-- article -->
 			<article id="post-404">
 				<h1><?php _e( 'Page not found', 'html5blank' ); ?></h1>
-				<img class="img-responsive" src="http://localhost:8888/bellevillezoo/wp-content/uploads/2014/07/grain-de-riz.jpg">
+				<img class="img-responsive" src="http://bellevillezoo.com/wp-content/uploads/2014/07/grain-de-riz.jpg">
 			</article>
 			<!-- /article -->
 		</div>
