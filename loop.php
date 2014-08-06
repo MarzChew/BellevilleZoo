@@ -26,7 +26,7 @@ echo substr($parentscategory,0,-2); ?></span>
 			<span class="date"><?php //the_time('d/m/Y'); ?><?php
   foreach((get_the_category()) as $category) {
     if ($category->category_parent  != 0) {
-    echo '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr(strip_tags($category->name)) . '" ' . '>' . $category->name.'</a>&nbsp;&nbsp;';
+    echo '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr(strip_tags($category->name)) . '" ' . '>' . $category->name.'<span class="separator">,</span></a>';
     }
   }
 ?></span>

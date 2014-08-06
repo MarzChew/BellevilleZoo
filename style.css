@@ -63,6 +63,8 @@ h2 {
 
 #bloc-image img {
 	margin:auto;
+		
+
 }
 
 #loop-wrapper article {
@@ -79,13 +81,29 @@ article a.img-link {
 	display:block;
 }
 
+article a.img-link img {
+
+}
+
+article .post-details{
+
+}
 article .post-details span {
 	display:block;
+}
+article .post-details span.separator {
+	display:inline;
+	padding-right: 0.15em;
+}
+article .post-details span.date a:last-child span.separator {
+	
+	display: none;
 }
 
 article.post h2 {
 	font-size:1.5em;
 	margin:3% 0 0;
+
 }
 
 .logo {
@@ -110,6 +128,7 @@ span.post-cat a {
 
 span.date {
 	font-size:.8em;
+	display: block;
 }
 
 /*BACKGROUND YELLOW------------------------------------------------ */

@@ -13,7 +13,8 @@
   				<!-- /post title --> 
 				<!-- post details --> 
 				<span class="post-cat"> 
-					<?php the_tags( __( '', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
+					<?php //the_tags( __( '', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
+					<?php the_category(', ');?>
 				</span>
 				<span class="date">
   					<?php the_time('d/m/Y'); ?>
@@ -46,7 +47,7 @@ $url = $thumb['0'];
 	    
 	    
     ?>
-    <div class="bloc-image-background" style="background-image:url( <?=$url?>);"></div>
+    <div class="bloc-image-background" style="background-image:url( <?=$url?>);" data-adaptive-background='1' data-ab-css-background='1'></div>
    
     
     

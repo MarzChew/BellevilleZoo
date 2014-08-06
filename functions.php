@@ -126,6 +126,31 @@ array(
 function html5blank_header_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
+     
+    if(is_home()){
+	    
+	            wp_register_script('Gmaps', 'https://maps.googleapis.com/maps/api/js?v=3.exp', array(), '1.0.0'); // Gmaps scripts
+        wp_enqueue_script('Gmaps'); // Enqueue it!
+        
+        	 	wp_register_script('images', '//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.min.js', array(), '3.1.5'); // Conditionizr
+        wp_enqueue_script('images'); // Enqueue it!
+        	wp_register_script('infiniteScroll', '//cdnjs.cloudflare.com/ajax/libs/jquery-infinitescroll/2.0b2.120519/jquery.infinitescroll.min.js', array(), '2.0.0'); // Conditionizr
+        wp_enqueue_script('infiniteScroll'); // Enqueue it!
+	
+    	wp_register_script('masonry', '//cdnjs.cloudflare.com/ajax/libs/masonry/3.1.5/masonry.pkgd.min.js', array(), '3.1.5'); // Conditionizr
+        wp_enqueue_script('masonry'); // Enqueue it!
+        
+    }
+    
+        if(is_singular()){
+        
+            	wp_register_script('imgBack', get_template_directory_uri() . '/js/lib/jquery.adaptive-backgrounds.js', array(), '4.3.0'); // Conditionizr
+        wp_enqueue_script('imgBack'); // Enqueue it!
+
+
+    }
+    
+    
           wp_deregister_script('jquery');
 		 wp_register_script('jquery', 'http://code.jquery.com/jquery-2.1.1.min.js', array(), null, false);
 		 wp_enqueue_script('jquery');
@@ -138,18 +163,16 @@ function html5blank_header_scripts()
         wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
         wp_enqueue_script('modernizr'); // Enqueue it!
         
-        wp_register_script('Gmaps', 'https://maps.googleapis.com/maps/api/js?v=3.exp', array(), '1.0.0'); // Gmaps scripts
-        wp_enqueue_script('Gmaps'); // Enqueue it!
-        
-        	 	wp_register_script('images', '//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.min.js', array(), '3.1.5'); // Conditionizr
-        wp_enqueue_script('images'); // Enqueue it!
-        	wp_register_script('infiniteScroll', '//cdnjs.cloudflare.com/ajax/libs/jquery-infinitescroll/2.0b2.120519/jquery.infinitescroll.min.js', array(), '2.0.0'); // Conditionizr
-        wp_enqueue_script('infiniteScroll'); // Enqueue it!
-	
-    	wp_register_script('masonry', '//cdnjs.cloudflare.com/ajax/libs/masonry/3.1.5/masonry.pkgd.min.js', array(), '3.1.5'); // Conditionizr
-        wp_enqueue_script('masonry'); // Enqueue it!
-        
+
     }
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
 

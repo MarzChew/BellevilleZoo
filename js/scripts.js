@@ -1,4 +1,4 @@
-			var $container = $('#loop-wrapper');	
+			var $container = $('.home #loop-wrapper');	
 
 
 (function($, root, undefined) {
@@ -30,6 +30,11 @@
 			});
 		});
 
+	
+	
+
+  $.adaptiveBackground.run()
+	
 	
 	
 	});
